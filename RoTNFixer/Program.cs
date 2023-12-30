@@ -56,7 +56,6 @@ class Program
     {
         Console.WriteLine($"Executing code for directory: {selectedDirectory}");
 
-        // Check for 'Official ROTN tweaks' in /resourcepacks
         string resourcePacksPath = Path.Combine(selectedDirectory, "resourcepacks", "Official ROTN tweaks");
 
         if (Directory.Exists(resourcePacksPath))
@@ -66,10 +65,9 @@ class Program
         else
         {
             Console.WriteLine("Not a valid ROTN modpack: 'Official ROTN tweaks' directory not found in /resourcepacks.");
-            return; // If not a valid ROTN modpack, exit early.
+            return; 
         }
 
-        // Navigate to /config/mod-director
         string modDirectorPath = Path.Combine(selectedDirectory, "config", "mod-director");
 
         Console.WriteLine($"Listing files in {modDirectorPath}:");
